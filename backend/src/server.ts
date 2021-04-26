@@ -1,13 +1,10 @@
 import express from 'express'
-import cors from 'cors'
-
-const port = process.env.port || 3333
-
+import './database'
+import { routes } from './routes'
+const port = process.env.PORT || 3333
 const app = express()
 
 app.use(express.json())
-app.use(cors())
+app.use(routes)
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
-})
+app.listen(port, () => console.log(`Server is running on port ${port}`))

@@ -4,10 +4,19 @@ import { v4 as uuid } from 'uuid'
 class User {
   @PrimaryColumn()
   id: string
+
   @Column()
   email: string
+
+  @Column()
+  name: string
+
   @Column()
   cpf: string
+
+  @Column()
+  phone: string
+
   @CreateDateColumn()
   created_at: Date
 
