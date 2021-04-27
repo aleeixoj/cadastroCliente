@@ -1,0 +1,13 @@
+<div class="form">
+  <input type="text" placeholder="Nome" [(ngModel)]="request.name" />
+  <input type="text" placeholder="CPF" [(ngModel)]="request.cpf" />
+  <input type="text" placeholder="E-mail" [(ngModel)]="request.email" />
+  <input
+    type="text"
+    placeholder="Telefone para Contato"
+    [(ngModel)]="request.phone"
+  />
+
+  <p *ngIf="response">{{ response.message }}</p>
+  <button (click)="save()">Criar</button>
+</div>

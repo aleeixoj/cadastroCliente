@@ -1,0 +1,30 @@
+<div class="table">
+  <h1>Lista de Clientes</h1>
+  <div class="form">
+    <label for="#email">Buscar Cadastro</label>
+    <input
+      type="text"
+      placeholder="Digite o E-mail"
+      id="email"
+      [(ngModel)]="requestBusca.email"
+    />
+    <button (click)="buscar()">buscar</button>
+  </div>
+  <table *ngIf="responseUsers">
+    <thead>
+      <td>Nome</td>
+      <td>Telefone</td>
+      <td>E-mail</td>
+      <td>CPF</td>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ responseUsers.name }}</td>
+        <td>{{ responseUsers.phone }}</td>
+        <td>{{ responseUsers.email }}</td>
+        <td>{{ responseUsers.cpf }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button><a routerLink="/users/create">Cadastrar Cliente</a></button>
+</div>

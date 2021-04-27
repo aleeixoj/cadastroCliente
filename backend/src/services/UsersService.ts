@@ -17,7 +17,7 @@ class UsersService {
   async create({ email, name, phone, cpf }: IUser) {
     //verificar se usuario existe
     const userExists = await this.userRepository.findOne({ email })
-    //se existir, retornar usuario
+    //se existir, retorna erro
     if (userExists) {
       throw new Error('User already exists')
     }
@@ -27,13 +27,20 @@ class UsersService {
     return user
   }
   async show(email: string) {
+    //busca usuario
     const findUser = await this.userRepository.findOne({ email })
 
     if (!findUser) {
+      //se não encontrar, retorna erro
       throw new Error('User not exists')
     }
-
+    //se encontrar, retorna o usuario
     return findUser
+  }
+  async getAllUser() {
+    const findAllUser = await this.userRepository.find()
+
+    return findAllUser
   }
 }
 export { UsersService }

@@ -4,7 +4,8 @@ const usersController = new UsersController()
 
 const routes = Router()
 routes.post('/create', usersController.create)
-routes.get('/getuser', usersController.findUser)
+routes.post('/getClient', usersController.findUser)
+routes.get('/getAll', usersController.showUser)
 routes.put('/editUser/:email', usersController.editUser)
 
 export { routes }
