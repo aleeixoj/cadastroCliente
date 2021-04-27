@@ -48,6 +48,7 @@ The following tools were used in this project:
 - [AngularJs](https://angular.io/)
 - [TypeORM](https://typeorm.io/)
 - [SQLite3](https://www.sqlite.org/index.html)
+- [Insomnia](https://insomnia.rest/download)
 
 ## :white_check_mark: Requirements
 
@@ -88,6 +89,8 @@ $ ng serve -o
 
 # The project will initialize in the <http://localhost:4200>
 ```
+## :white_check_mark: OBS
+To search for a customer by business key through a REST service, use Insomnia or Postman
 
 ## :memo: License
 
